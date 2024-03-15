@@ -1,0 +1,643 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+  /* box-sizing: border-box; */
+}
+body {
+  user-select: none;
+}
+#resultByDesign, #resultByDates{
+  display: none;
+}
+.input-box {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin: 30px 0;
+  border-bottom: 2px solid #162938;
+}
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  font-weight: 600;
+  color: #162938;
+  padding: 0 35px 0 5px;
+}
+
+.Remember-forgot {
+  font-size: 0.9em;
+  color: black;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.terms-conditions {
+  font-size: 0.9em;
+  color: black;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.Remember-forgot label input {
+  accent-color: #162938;
+  margin-right: 3px;
+}
+.terms-conditions label input {
+  accent-color: #162938;
+  margin-right: 3px;
+}
+
+.Remember-forgot a {
+  color: black;
+  text-decoration: none;
+}
+
+.Remember-forgot a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.wrapper {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  background: transparent;
+  backdrop-filter: blur(20px);
+
+  width: 400px;
+  height: 440px;
+  position: relative;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transition: height 0.2s ease;
+
+  overflow: hidden;
+}
+
+.wrapper.active {
+  height: 520px;
+}
+
+.wrapper.active .form_connexion {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.wrapper .form_connexion {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.wrapper .form_inscription {
+  position: relative;
+  transition: none;
+  transform: translateX(400px);
+}
+
+#formInscription{
+  width: 80%;
+  top: 0px;
+  padding: 40px;
+}
+
+.wrapper.active .form_inscription {
+  transition: transform 0.18s ease;
+ 
+  transform: translateX(0);
+  transform: translateY(-420px);
+}
+
+.wrapper .form_connexion,
+.form_inscription {
+  width: 80%;
+  padding: 40px;
+}
+
+#btnConnexion,
+#btnInscription {
+  width: 100%;
+  height: 45px;
+  background: #162938;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}
+
+.login-registrer {
+  font-size: 0.9em;
+  color: black;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+.login-registrer p a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+.login-registrer p a:hover {
+  text-decoration: underline;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  background: #225dff67;
+  background-image: url('./images/sary1.jpg');
+  background-position: center;
+  background-size: cover; 
+}
+
+.container h2 {
+  font-size: 2em;
+  color: #162938;
+  text-align: center;
+}
+
+/*wrapper contient l'interface de connexion*/
+.wrapper {
+  display: none;
+}
+#divPrincipale{
+  display: block;
+}
+
+/** Menu principal: **/
+#divPrincipale {
+  position: fixed;
+  border: 1px solid #444;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  width: 950px;
+  height: 550px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.barMenuVerticale {
+  margin: inherit;
+  margin: 0 auto;
+  border-right: 1px solid #444;
+  width: 180px;
+  height: 100%;
+}
+.icon {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+  margin-left: 35px;
+}
+
+.sectionMenus {
+  width: 180px;
+  height: 100%;
+}
+
+.listeMenus {
+  margin-top: 40px;
+}
+.listeMenus button {
+  width: 180px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  border: 1px solid blue;
+  transition: transform 0.3s ease;
+}
+.listeMenus button:hover {
+  color: blue;
+  cursor: pointer;
+  transform: scale(0.9);
+}
+.barMenuVerticale ul li {
+  list-style: none;
+}
+.barMenuVerticale ul {
+  /** padding-top: 0px; **/
+}
+.barMenuVerticale h4 {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 13px;
+}
+
+/** les divs contenus**/
+
+.envoiyerColis {
+  width: 770px;
+  height: 100%;
+  position: relative;
+  top: 41%;
+  left: 26.5%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #444;
+  display: block;
+  float: right;
+  margin: 0;
+}
+.contenu {
+  width: 770px;
+  height: 550px;
+
+  position: absolute;
+  top: 9px;
+  left: 363px;
+
+  margin-top: 40px;
+}
+.navEnvoi,
+.navHistorique {
+  border: 1px solid black;
+  width: 770px;
+  height: 100px;
+  left: 0;
+  float: left;
+  margin: 0 auto;
+}
+.envoiyerColis .navHistorique {
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+.navHistorique section input {
+  width: 150px;
+  height: 30px;
+}
+.navHistorique section button {
+  width: 40px;
+  height: 30px;
+}
+.findByDatesClass {
+  float: left;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.findByDesignClass {
+  float: right;
+  margin-top: 40px;
+  margin-right: 10px;
+}
+.rechercheDesignationCode{
+  position: relative;
+  left: 1px;
+}
+.myBackButton {
+  display: none;
+  position: fixed;
+  top: 6px;
+  left: 720px;
+}
+.navEnvoi h2 {
+  text-align: center;
+  padding-top: 20px;
+  font-family: sans-serif;
+}
+.navEnvoi h6 {
+  font-size: 0.8em;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.formulaireEnvoyeur,
+.secondFormulaireEnvoyeur,
+.receptionColis,
+.classModification {
+  width: 770px;
+  height: 450px;
+}
+
+.inputLeft,
+.modifLeft,
+.modifRight {
+  width: 260px;
+  height: 280px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+.formulaireEnvoyeur article input {
+  width: 250px;
+  height: 30px;
+}
+
+.formulaireEnvoyeur article label {
+  display: block;
+  margin-top: 20px;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+.formulaireEnvoyeur article select {
+  display: block;
+  height: 30px;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.inputRight {
+  width: 260px;
+  height: 280px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 40px;
+  position: relative;
+}
+.formulaireEnvoyeur .buttonEnvoi {
+  margin: 380px 20px 10px 270px;
+  width: 150px;
+  height: 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  position: absolute;
+}
+.formulaireModif .buttonClear {
+  margin: 380px 180px 10px 170px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-image: url("./images/cleaning.png");
+  background-size: cover;
+}
+.buttonClear2 {
+  margin-top: 140px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 90px;
+  right: 220px;
+  background-image: url("./images/cleaning.png");
+  background-size: cover;
+}
+.navHistorique {
+  display: none;
+}
+.formulaireEnvoyeur {
+  display: block; /**   POUR CACHER LE DIV AVEC LE FORMULAIRE DE L'ENVOYEUR**/
+}
+.secondFormulaireEnvoyeur {
+  display: none;
+}
+.receptionColis {
+  display: none;
+}
+.classModification {
+  display: none;
+  position: relative;
+}
+.secondFormulaireEnvoyeur article label {
+  display: block;
+  margin-top: 30px;
+
+  font-family: sans-serif;
+  font-size: 15px;
+}
+.secondFormulaireEnvoyeur form input {
+  width: 250px;
+  height: 30px;
+}
+.secondFormulaireEnvoyeur form select
+{
+  width: 250px;
+  height: 30px;
+}
+.secondFormulaireEnvoyeur form {
+  margin-top: 90px;
+}
+.inputItineraire {
+  width: 260px;
+  height: 280px;
+  float: right;
+
+  margin-top: 50px;
+  margin-right: 250px;
+  position: relative;
+}
+.secondFormulaireEnvoyeur .inputItineraire .buttonTerminerEnvoi {
+  margin-top: 140px;
+  width: 150px;
+  height: 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  position: absolute;
+  top: 90px;
+  right: 10px;
+}
+
+.receptionColis .receptionColisGauche label {
+  display: block;
+  font-family: sans-serif;
+  font-size: 15px;
+  margin-top: 160px;
+  padding-top: 20px;
+  left: 40px;
+}
+.receptionColis .receptionColisGauche input {
+  width: 250px;
+  height: 30px;
+  margin-top: 30px;
+}
+.receptionColis .receptionColisGauche button {
+  width: 150px;
+  height: 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  position: absolute;
+  margin: 10px 50px 10px 80px;
+  left: 0;
+}
+.receptionColis .receptionColisGauche {
+  background-color: grey;
+  margin-top: 210px;
+  margin-left: 10px;
+  top: 70px;
+  left: 0;
+
+  text-align: center;
+  width: 320px;
+  height: 220px;
+  border-radius: 10px;
+}
+.receptionColis .receptionColisDroite {
+  width: 330px;
+  height: 320px;
+  background-color: grey;
+  margin-top: 150px;
+  top: 0;
+  left: 370px;
+  position: absolute;
+  border-radius: 10px;
+}
+.receptionColisDroite form p {
+  font-family: sans-serif;
+  font-weight: bold;
+
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.receptionColisDroite form .buttonReception {
+  width: 170px;
+  height: 40px;
+  font-family: sans-serif;
+  font-weight: bolder;
+  margin: 20px 90px 20px 90px;
+  right: 0;
+}
+input:focus {
+  outline: none;
+}
+
+/*Modifier*/
+table {
+  position: absolute;
+  border-collapse: collapse; /* Fusionner les bordures adjacentes en une seule */
+  width: 100%;/* Largeur du tableau */
+  table-layout: fixed; /* Toutes les colonnes auront la même largeur */
+}
+
+thead {
+  color: white;
+  background-color: #1d976c;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #1d976c;
+}
+
+.theadDesign th{
+  position: sticky;
+  top: 0;
+  background-color: #1d976c;
+  width: 700px;
+}
+
+.formulaireModif {
+  position: sticky;
+  top: 50%;
+  left: 50%;
+}
+
+th {
+  text-align: center;
+}
+.theadDesign td {
+  text-align: left; /* Alignement du texte dans les cellules */
+  width: 20px;
+}
+
+th,
+td {
+  border: 1px solid black; /* Bordures de 1 pixel solides en noir */
+  padding: 8px; /* Espace à l'intérieur des cellules */
+}
+
+#idModification {
+  overflow: auto;
+  scrollbar-width: thin;
+}
+#idModification::-webkit-scrollbar {
+  width: 20px;
+}
+#idModification::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+#idModification::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+.tableButton,
+.senderId {
+  width: 50px;
+}
+
+.formulaireModif {
+  position: fixed;
+  width: 600px;
+  height: 350px;
+  background-color: #1d976c;
+  top: 63%;
+  left: 50.6%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 15px;
+  display: none;
+}
+.formulaireModif section input {
+  width: 200px;
+  height: 30px;
+}
+.modifLeft,
+.modifRight {
+  margin-top: 20px;
+}
+.recetteContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 0px;
+  width: auto;
+  height: 100px;
+}
+
+.formulaireModif .saveButton {
+  margin: 0px 30px 5px 390px;
+  width: 150px;
+  height: 40px;
+  position: relative;
+}
+.clearButtonModif {
+  margin: 0px 190px 5px 340px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-image: url("./images/cleaning.png");
+  background-size: cover;
+}
+.formulaireModif .closeButton {
+  margin-left: 570px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-image: url("./images/cleaning.png");
+  background-size: cover;
+}
